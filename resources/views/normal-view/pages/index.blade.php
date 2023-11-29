@@ -51,7 +51,7 @@
                         <div class="card-body">
                             <h3 class="card-title"><strong>{{ $category->name }}</strong></h3>
                             <p class="card-text">{{ $category->remarks }}</p>
-                            <p class="card-text"><strong>Total Tickets: </strong>{{ $category->ships_count }}</p>
+                            <p class="card-text"><strong>Total Voyage: </strong>{{ $category->ships_count }}</p>
                             <a href="/category/{{ $category->id }}" class="btn btn-primary">See more details <i class="far fa-arrow-right"></i> </a>
                         </div>
                     </div>

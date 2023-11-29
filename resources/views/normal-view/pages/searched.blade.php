@@ -32,20 +32,25 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
 
     <div class="container">
         <h2 class="my-4"><i class="far fa-ship"></i> Search result for "{{ $search }}"</h1>
+
+            <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
+                        class="far fa-arrow-left"></i>
+                    Search
+                    another</a></p>
     </div>
     <div class="d-flex justify-content-center mt-2 py-5">
         @if ($search)
             <div class="container">
                 <div class="row" id="list">
                     @forelse ($categories as $category)
-                        <div class="col-6 mb-4">
+                        <div class="col-md-6 mb-4">
                             <div class="card" data-aos="zoom-in-left">
                                 <img src="{{ Storage::url($category->ship_image) }}" class="card-img-top"
                                     alt="{{ $category->name }}" style="width: 100%; height: 350px;">
                                 <div class="card-body">
                                     <h3 class="card-title"><strong>{{ $category->name }}</strong></h3>
                                     <p class="card-text">{{ $category->remarks }}</p>
-                                    <p class="card-text"><strong>Total Tickets: </strong>{{ $category->ships_count }}
+                                    <p class="card-text"><strong>Total Voyage: </strong>{{ $category->ships_count }}
                                     </p>
                                     <a href="/category/{{ $category->id }}" class="btn btn-primary">See more details <i
                                             class="far fa-arrow-right"></i> </a>
@@ -62,6 +67,10 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
                                 another</a></p>
                     @endforelse
                 </div>
+                <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
+                            class="far fa-arrow-left"></i>
+                        Search
+                        another</a></p>
             </div>
         @else
             <h5 class="text-center mt-2">
