@@ -110,11 +110,11 @@
                             </div>
                         </div>
                         @if ($ship->ticket_quantity == 0)
-                            <button class="btn btn-primary w-100" disabled><i class="far fa-calendar-check"></i>
-                                Checkout</button>
+                            <button class="btn btn-primary w-100" disabled><i class="far fa-check"></i>
+                                Book now</button>
                         @else
-                            <button class="btn btn-primary w-100" type="submit"><i class="far fa-calendar-check"></i>
-                                Checkout</button>
+                            <button class="btn btn-primary w-100" type="submit"><i class="far fa-check"></i>
+                                Book now</button>
                         @endif
                     </form>
                     <p><a href="#" class="btn btn-dark my-1 w-100" onclick="goBack()"><i

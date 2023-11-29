@@ -21,11 +21,11 @@
                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
                 @endif
-                <div class="row">
+                <div class="row justify-content-center">
                     <div class="col-md-6">
                         <div class="form-group mb-4">
                             <input type="text" id="name" name="name"
-                                class="form-control  @error('name') is-invalid @enderror"
+                                class="form-control  @error('name') is-invalid animate bounceIn @enderror"
                                 value="@auth{{ auth()->user()->name }}@else{{ old('name') }}@endauth"
                                 @auth readonly @endauth autocomplete="name" placeholder="Your Name *">
                             @error('name')
@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-group mb-4">
                             <input type="text" id="email" name="email"
-                                class="form-control @error('email') is-invalid @enderror"
+                                class="form-control @error('email') is-invalid animate bounceIn @enderror"
                                 value="@auth{{ auth()->user()->email }}@else{{ old('email') }}@endauth"
                                 autocomplete="email" @auth readonly @endauth placeholder="Your Email *">
                             @error('email')
@@ -45,20 +45,20 @@
                                 </span>
                             @enderror
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btnContact">Send Message <i
-                                    class="far fa-paper-plane"></i></button>
+                        <div class="">
+                            <div class="form-group">
+                                <textarea name="message" class="form-control @error('message') is-invalid animate bounceIn @enderror" autocomplete="message" autofocus
+                                    placeholder="Your Message *" style="width: 100%; height: 150px;">{{ old('message') }}</textarea>
+                                @error('message')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <textarea name="message" class="form-control @error('message') is-invalid @enderror" autocomplete="message" autofocus
-                                placeholder="Your Message *" style="width: 100%; height: 150px;">{{ old('message') }}</textarea>
-                            @error('message')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btnContact form-control w-100">Send Message <i
+                                    class="far fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>

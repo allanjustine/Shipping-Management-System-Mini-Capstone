@@ -56,7 +56,7 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
                         <h5 class="text-center">
                             No records list
                         </h5>
-                        <p class="text-center"><a href="#" class="btn btn-dark my-2 w-25" onclick="goBack()"><i
+                        <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
                                     class="far fa-arrow-left"></i>
                                 Search
                                 another</a></p>
@@ -67,7 +67,7 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
             <h5 class="text-center mt-2">
                 No records found
             </h5>
-            <p class="text-center"><a href="#" class="btn btn-dark my-2 w-25" onclick="goBack()"><i
+            <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
                         class="far fa-arrow-left"></i>
                     Search
                     another</a></p>

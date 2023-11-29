@@ -10,7 +10,7 @@
         <div class="card">
             <img src="{{ Storage::url($category->ship_image) }}" class="card-img-top" alt="{{ $category->name }}"
                 style="width: 100%; height: 450px;">
-            <div class="row p-5">
+            <div class="row p-2">
                 <h3 class="p-4"><i class="far fa-ship"></i> {{ $category->name }} details</h3>
                 @if ($category)
                     @forelse ($category->ships as $ship)
@@ -57,10 +57,10 @@
                     @endforelse
                 @else
                     <h1>No category found</h1>
-                    <p><a href="#" class="btn btn-dark my-2 w-25" onclick="goBack()"><i class="far fa-arrow-left"></i>
+                    <p><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i class="far fa-arrow-left"></i>
                             Back</a></p>
                 @endif
-                <p><a href="#" class="btn btn-dark my-2 w-25" onclick="goBack()"><i class="far fa-arrow-left"></i>
+                <p><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i class="far fa-arrow-left"></i>
                         Back</a></p>
             </div>
         </div>

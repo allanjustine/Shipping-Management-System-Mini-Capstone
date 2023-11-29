@@ -44,7 +44,7 @@
     <div class="container">
         <div class="row" id="list">
             @forelse ($categories as $category)
-                <div class="col-6 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="card" data-aos="zoom-in-left">
                         <img src="{{ Storage::url($category->ship_image) }}" class="card-img-top"
                             alt="{{ $category->name }}" style="width: 100%; height: 350px;">
