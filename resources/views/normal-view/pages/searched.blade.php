@@ -31,12 +31,16 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
     </div>
 
     <div class="container">
-        <h2 class="my-4"><i class="far fa-ship"></i> Search result for "{{ $search }}"</h1>
+        @if ($search)
+            <h2 class="my-4"><i class="far fa-ship"></i> Search result for "{{ $search }}"</h2>
+        @else
+            <h2 class="my-4"><i class="far fa-ship"></i> Ops! No records found!</h2>
+        @endif
 
-            <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
-                        class="far fa-arrow-left"></i>
-                    Search
-                    another</a></p>
+        <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
+                    class="far fa-arrow-left"></i>
+                Search
+                another</a></p>
     </div>
     <div class="d-flex justify-content-center mt-2 py-5">
         @if ($search)
@@ -61,10 +65,6 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
                         <h5 class="text-center">
                             No records list
                         </h5>
-                        <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
-                                    class="far fa-arrow-left"></i>
-                                Search
-                                another</a></p>
                     @endforelse
                 </div>
                 <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
@@ -73,13 +73,17 @@ background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);">
                         another</a></p>
             </div>
         @else
-            <h5 class="text-center mt-2">
-                No records found
-            </h5>
-            <p class="text-center"><a href="#" class="btn btn-dark my-2 w-50" onclick="goBack()"><i
-                        class="far fa-arrow-left"></i>
-                    Search
-                    another</a></p>
+            <div class="container">
+                <h5 class="text-center mt-2">
+                    No records found
+                </h5>
+                <p class="text-center">
+                    <a href="#" class="btn btn-dark my-2 w-50 mt-2" onclick="goBack()"><i
+                            class="far fa-arrow-left"></i>
+                        Search
+                        another</a>
+                </p>
+            </div>
         @endif
     @endsection
 
