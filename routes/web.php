@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ShipController;
 use App\Http\Controllers\Auth\AuthIndexController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\TestEnrollmentController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
